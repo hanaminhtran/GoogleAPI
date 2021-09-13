@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "provider": "filesystem",
+      "library": "C:\\temp\\lodash\\",
+      "files": [
+        "lodash.js",
+        "lodash.min.js"
+      ],
+      "destination": "wwwroot/lib/lodash/"
+    },
+    {
+      "library": "jquery@3.6.0",
+      "destination": "wwwroot/lib/jquery/"
+    }
+  ]
+}

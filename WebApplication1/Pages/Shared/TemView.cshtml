@@ -1,0 +1,25 @@
+﻿@page
+@model HanaToolUtilities.Pages.Shared.TemViewModel
+
+@{
+    ViewData["Title"] = "TemView";
+}
+
+<h1>TemView</h1>
+
+<div>
+    <h4>TemModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TemModel.Data)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TemModel.Data)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.TemModel.iD">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

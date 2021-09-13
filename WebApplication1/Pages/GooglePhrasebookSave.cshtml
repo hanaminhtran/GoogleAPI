@@ -1,0 +1,47 @@
+﻿@page
+@model WebApplication1.Pages.GooglePhrasebookSaveModel
+
+@{
+    ViewData["Title"] = "GooglePhrasebookSave";
+}
+
+<h1>GooglePhrasebookSave</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                @if(ViewData["Status"] != null)
+                if (ViewData["Status"].ToString() != ""  ) 
+                {
+                        <label><span style="color:blue"> @ViewData["Status"] </span> has been added to your Gooogle Phrasebook!</label>
+                 }
+            </div>
+            <div class="form-group">
+                <label asp-for="GooglePhraseModel.txtFromText" class="control-label">Translate from text</label>
+                <textarea asp-for="GooglePhraseModel.txtFromText" class="form-control"></textarea>
+                <span asp-validation-for="GooglePhraseModel.txtFromText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GooglePhraseModel.txtToText" class="control-label">to</label>
+                <textarea asp-for="GooglePhraseModel.txtToText" class="form-control"></textarea>
+                <span asp-validation-for="GooglePhraseModel.txtToText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+
+
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

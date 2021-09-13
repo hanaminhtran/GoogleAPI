@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "gulp": "4.0.2",
+    "@types/jquery": "3.5.6",
+    "google-tts-api": "2.0.2",
+    "@types/node": "16.9.1",
+    "commonjs": "0.0.1",
+    "requirejs": "2.3.6",
+    "minhlib": "1.0.3"
+  }
+}

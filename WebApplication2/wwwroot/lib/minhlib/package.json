@@ -1,0 +1,55 @@
+{
+  "_from": "minhlib@1.0.3",
+  "_id": "minhlib@1.0.3",
+  "_inBundle": false,
+  "_integrity": "sha512-EqoF84bceQi8sAiuWBQbRsyRkzIPVznzYR6n1qYV8MTRXJF7ctp862+/rZdzRFsdWnFESspjcr6xs/hhWgqh3w==",
+  "_location": "/minhlib",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "minhlib@1.0.3",
+    "name": "minhlib",
+    "escapedName": "minhlib",
+    "rawSpec": "1.0.3",
+    "saveSpec": null,
+    "fetchSpec": "1.0.3"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/minhlib/-/minhlib-1.0.3.tgz",
+  "_shasum": "20c7b4d139fbbd262490f1b5c2c6a71a81248ec8",
+  "_spec": "minhlib@1.0.3",
+  "_where": "C:\\Users\\vnpal\\TYPESCRIPT\\GoogleTranslateFreeApi\\WebApplication2",
+  "author": {
+    "name": "hanaminhtran"
+  },
+  "bugs": {
+    "url": "https://github.com/hanaminhtran/testpublicnpm/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "minh first lib alert",
+  "files": [
+    "/dist"
+  ],
+  "homepage": "https://github.com/hanaminhtran/testpublicnpm#readme",
+  "keywords": [
+    "test",
+    "npm",
+    "public"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "minhlib",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanaminhtran/testpublicnpm.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "types": "dist/index.d.ts",
+  "version": "1.0.3"
+}

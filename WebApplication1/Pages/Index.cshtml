@@ -1,0 +1,181 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Hana Tool Utilities";
+}
+
+
+
+<style>
+
+    .block {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: #04AA6D;       
+        padding: 140px 10px;
+        font-size: 200%;
+        cursor: pointer;
+        text-align: center;
+    }
+    .randomarea
+     {        
+        width: 100%;
+        height: 100%;    
+    }
+
+    .block:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    table.setting {
+        width: 50%;
+        table-layout: fixed;
+        background: #d3c9bd;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    table.showdata {
+        width: 80%;
+        table-layout: fixed;
+        background: #d3c9bd;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+        table.showdata td:nth-child(3) {
+            width: 3%;
+            background: #cba16f;
+        }
+
+        table.showdata td {
+            border-top: thin solid;
+            border-bottom: thin solid;
+        }
+
+        table.showdata td {
+            border-left: thin solid;
+            text-align: left;
+        }
+
+            table.showdata td:last-child {
+                border-right: thin solid;
+            }
+
+
+        table.showdata tr:hover {
+            background: #808080;
+        }
+</style>
+
+
+
+
+
+<div class="text-center"> 
+    <label id="temp" hidden="hidden">@ViewData["temp"]"</label>    
+    <div id="Setting">
+        <table class="setting">
+            <tr>
+                <td>
+                    <label>Word Per Page</label>
+                </td>
+                <td>
+                    <input id="txtwordPerPage" /> </input>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <label>Play Interval</label>
+                <td>
+                    <input id="txtPlayInterval"> </input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Random from index</label>
+                <td>
+                    <input id="txtrandomFrom"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Random to</label>
+                <td>
+                    <input id="txtrandomTo"></input>
+                </td>
+            </tr>
+
+
+
+
+        </table>
+        <button type="button" class="btn btn-primary btn-md" onclick="SaveSetting()">
+            Save
+        </button>
+
+    </div>
+    <div id="back_and_next_areas">
+        <button id="bntStudyRandom" type="button" class="btn btn-primary btn-md" onclick="StudyRandom()">
+            Randomize words
+        </button>
+        <button id="bntAutoPlay" type="button" class="btn btn-primary btn-md" onclick="AutoPlay()">
+            AutoPlay
+        </button>
+        <button id="bntSetting" type="button" class="btn btn-primary btn-md" onclick="ShowSetting()">
+            Setting
+        </button>
+        <span>&nbsp</span>
+    </div>
+    <div id="navigation" style="padding: 10px;">
+        <span>&nbsp</span>
+
+        <button id="bntBack" type="button" class="btn btn-primary btn-md" onclick="Back()">
+            Back
+        </button>
+        <button id="bntNext" type="button" class="btn btn-primary btn-md" onclick="Next()">
+            Next
+        </button>
+    </div>
+    <div id="randometable" class="randomarea" hidden="hidden">
+        <span>&nbsp</span>
+        <div>
+            <button id="bntNextRandom" class="block" type="button" onclick="NextRandom()">
+                Randomize words
+            </button>
+        </div>
+    </div>
+    <table id="showdata" class="table">
+        @if (Model.GoogleWords != null)
+        @foreach (HanaToolUtilities.Models.GoogleWord word in Model.GoogleWords)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => word.FromLang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => word.ToLang)
+            </td>
+            <td>
+                <div>
+                    Speak
+                    <img src='https://cdn-icons-png.flaticon.com/128/59/59284.png' height='18' width='18'>
+                </div>
+            </td>
+        </tr>
+
+            }
+
+    </table>
+
+</div>
+
+    
+

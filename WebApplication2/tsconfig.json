@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es2019",
+    "outDir": "wwwroot/js",
+    "moduleResolution": "node",
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/google-tts-api"
+
+    ]
+  },
+  "include": [
+    "scripts/**/*",
+    "node_modules/**/*",
+    "wwwroot/js/**/*.ts"
+  ],
+  "lib": [
+    "es2017",
+    "esnext",
+    "DOM",
+    "ES5",
+    "ES2015"
+  ],
+
+  "exclude": [
+    "node_modules"    
+  ]
+}
